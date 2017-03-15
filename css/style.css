@@ -1,0 +1,285 @@
+body {
+    font-size: 62.5%;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    color: #00ccff;
+    text-decoration: none;
+    font-size: 1.6em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+img,
+picture,
+video,
+embed {
+    max-width: 100%;
+}
+
+/* Sprite */
+a.abre,a.fecha{
+    background-image: url("../img/img-sprite.gif");
+}
+
+.header {
+    width: 1292px;
+    height: 108px;
+    margin-bottom: 8px;
+    background-color: #ff151f;
+    position: relative;
+}
+
+.abre{
+    display: none;
+}
+
+.logo {
+    margin: 16px 0 0 16px;
+    float: left;
+    width: 192px;
+    height: 47px;  
+    background-image: url("../img/logo.gif");
+}
+
+.menu {
+    width: 52.468085%;
+    float: right;
+    margin: 24px 245px 24px 0;
+}
+
+.menu ul {
+    float: right;
+}
+
+.menu li {
+    font-size: 1.2em;
+    margin-left: 2em;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.menu li a {
+    font-size: 1.2em;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+form input{
+    position: absolute;
+    top: 26px;
+    right: 92px;
+    width: 132px;
+    height: 32px;
+    border:none;
+    background:#FFF url("../img/img-busca.gif") no-repeat right;
+    font-size: 1.2em;
+    color: #a3a3a3;
+}
+
+.sub-menu{
+    width:1292px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #1f1f1f;
+}
+
+.sub-menu ul li{
+    float:left;
+}
+
+.sub-menu ul li a{
+    padding:6px 16px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    display: inline-block;
+}
+
+.sub-menu ul li a.ativo{
+    background:url("../img/img-submenu.gif") no-repeat right;
+    background-color: #f71919;
+    padding-right: 40px;
+}
+
+#banner{
+    margin: 12px auto;
+    width: 728px;
+    height: 90px;
+}
+
+h1  {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 4em;
+    font-weight: 200;
+    color: #FFF;
+}
+
+.chamada-principal {
+    width: 45.22222222%;
+    float: left;
+}
+
+.chamada,#banner-355x250 {
+    width: 26.33%;
+    max-height: 244px;
+    float: left;
+}
+
+.banner-355x250 {
+    width: 46.1000000000%;
+    float: left;
+}
+
+.coluna {
+    width: 23.404255319149%;
+    float: left;
+    margin-top: 20px;
+    margin-right: 1.41%;
+}
+
+.coluna:last-child {
+    margin-right: 0;
+}
+
+h2 {
+    font-size: 2.1em;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+
+@media screen and (max-width: 1319px) {
+    
+    #banner{
+        margin: 6px auto;
+        width: 300px;
+        height: 48px;
+    }
+
+    #banner img{
+        height: 48px;
+    }
+
+    .header {
+        width:100%;
+        height: 56px;
+        background-color: #ed1c24;
+    }
+
+    .header .logo{
+        clear: both;
+        width: 262px;
+        height: 56px;
+        margin: 0;
+        background-image: url("../img/logo-mobile.gif");
+    }
+    
+    .abre,.fecha{
+        width: 58px;
+        height: 56px;
+        background-position: -56px 0;
+        display:block;
+        position:absolute;
+        right:0;
+        top:0;
+    }
+
+    .fecha{background-position:0 0;}
+    
+    .menu{
+        display: none;
+        position: absolute;
+        top: 56px;
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu ul{
+        float: none;
+        clear: both;
+        background-color: #ed1c24;
+    }
+
+    .menu ul li{
+        display: block;
+        margin-top: 0;
+        margin-left: 0;
+        padding-left: 2em;
+        border-bottom:1px solid #c21c1c;
+    }
+
+    .menu ul li a {
+        width: 100%;
+        height: 47px;
+        font-size: 1.2em;
+        display: inline-block;
+        padding-top: 15px;
+    }
+
+    form,.sub-menu{
+        display: none;
+    }
+
+    .chamada-principal,.chamada,#banner-355x250,.coluna {
+        width: 100%;
+        max-height: 100%;
+        margin: auto!important;
+        clear: both;
+        float: none;
+    }
+    
+    .chamada-principal img,.chamada img,#banner-355x250 img,.coluna img{
+        width: 100%
+    }
+
+    h2 {
+        width: 100%;
+        font-size: 1.6em;
+        font-weight: 50;
+        text-transform: uppercase;
+    }
+
+    p {
+        width: 100%;
+        font-size: 1.1em;
+        margin-bottom:20px;
+    }
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; 
+    display: table; 
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
